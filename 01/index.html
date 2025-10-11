@@ -12,6 +12,70 @@
           Build a page demonstrating various Bootstrap Alert styles (primary, secondary, success, etc.) with dismiss buttons.
     -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <nav class="bg-dark text-center py-2 sticky-top">
+        <div class="fs-3 font-monospace text-white">Code 01</div>
+    </nav>
+
+    <div class="container">
+        <div class="row p-4">
+            <div class="col col-12 col-lg-5">
+                <h1>Alert Notifications</h1>
+                <p>Shows all the available colors for bootstrap alert notifications.</p>
+                <div class="container px-0 mt-4 d-flex flex-wrap column-gap-2 row-gap-2">
+                    <button type="button" id="showPrimaryAlert" class="btn btn-sm btn-primary">Primary Alert</button>
+                    <button type="button" id="showSecondaryAlert" class="btn btn-sm btn-secondary">Secondary Alert</button>
+                    <button type="button" id="showSuccessAlert" class="btn btn-sm btn-success">Success Alert</button>
+                    <button type="button" id="showDangerAlert" class="btn btn-sm btn-danger">Danger Alert</button>
+                    <button type="button" id="showWarningAlert" class="btn btn-sm btn-warning">Warning Alert</button>
+                    <button type="button" id="showInfoAlert" class="btn btn-sm btn-info">Info Alert</button>
+                    <button type="button" id="showLightAlert" class="btn btn-sm btn-light">Light Alert</button>
+                    <button type="button" id="showDarkAlert" class="btn btn-sm btn-dark">Dark Alert</button>
+                </div>
+                <hr class="d-lg-none my-4">
+            </div>
+            <div class="col col-12 col-lg-7">
+                <div id="liveAlertPlaceholder"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('');
+
+            alertPlaceholder.append(wrapper);
+        }
+
+        const alertConfigs = [
+            { suffix: 'Primary', message: 'A simple primary alert! <a href="#" class="alert-link">An example link</a>.', type: 'primary' },
+            { suffix: 'Secondary', message: 'A simple secondary alert! <a href="#" class="alert-link">An example link</a>.', type: 'secondary' },
+            { suffix: 'Success', message: 'A simple success alert! <a href="#" class="alert-link">An example link</a>.', type: 'success' },
+            { suffix: 'Danger', message: 'A simple danger alert! <a href="#" class="alert-link">An example link</a>.', type: 'danger' },
+            { suffix: 'Warning', message: 'A simple warning alert! <a href="#" class="alert-link">An example link</a>.', type: 'warning' },
+            { suffix: 'Info', message: 'A simple info alert! <a href="#" class="alert-link">An example link</a>.', type: 'info' },
+            { suffix: 'Light', message: 'A simple light alert! <a href="#" class="alert-link">An example link</a>.', type: 'light' },
+            { suffix: 'Dark', message: 'A simple dark alert! <a href="#" class="alert-link">An example link</a>.', type: 'dark' }
+        ];
+
+        alertConfigs.forEach(config => {
+            const triggerId = `show${config.suffix}Alert`;
+            const triggerElement = document.getElementById(triggerId);
+
+            if (triggerElement) {
+                triggerElement.addEventListener('click', () => {
+                    appendAlert(config.message, config.type);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
