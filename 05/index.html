@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Card Grid</title>
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font : Goldman -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         .gradient-overlay {
             background: linear-gradient(to bottom, transparent 0%, rgba(11, 21, 31,1) 100%);
@@ -14,6 +19,23 @@
         body {
             background-color: rgb(11, 21, 31);
         }
+
+        .goldman-regular {
+            font-family: "Goldman", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .goldman-bold {
+            font-family: "Goldman", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1.5px black;
+            text-shadow: rgba(87,82,208, 0.7) 1px 0 7px;
+        }
     </style>
 </head>
 <body>
@@ -22,10 +44,24 @@
           Create a grid of at least four uniform display Cards featuring an image, title, description, and an "Add to Cart" button.
     -->
 
+    <!-- Hero Image -->
     <div class="position-relative d-block w-100">
         <img src="./images/keyland_heroimage.jpg" alt="Keyland Hero Image" class="img-fluid w-100 d-block">
         <div class="gradient-overlay position-absolute bottom-0 start-0 w-100 h-50"></div>
     </div>
+
+    <main>
+        <!-- Main Content Title -->
+        <div class="container text-center text-light mt-5">
+            <span class="goldman-bold fs-4 d-none d-lg-block text-stroke">2025 KEYLAND: Uncanny Valley</span>
+            <span class="goldman-bold fs-6 d-lg-none text-stroke">2025 KEYLAND: Uncanny Valley</span>
+
+            <h1 class="goldman-bold fs-3 d-none d-lg-block text-stroke">OFFICIAL MERCHANDISE DETAILS</h1>
+            <h1 class="goldman-bold fs-5 d-lg-none text-stroke">OFFICIAL MERCHANDISE DETAILS</h1>
+        </div>
+
+        
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
