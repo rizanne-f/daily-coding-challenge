@@ -5,17 +5,256 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Information Pop-Up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        img {
+            max-height: 130px;
+        }
+        img:hover {
+            outline: 3px solid #0dcaf0;
+            outline-offset: -3px;
+        }
+        
+    </style>
 </head>
 <body>
     <!--
         * DAY 6: Modal Information Pop-Up
-          Build a button that triggers a Modal containing complex content like an FAQ or a detailed privacy notice.
+          Build a button that triggers a Modal.
     -->
 
-    <h1>Venting Machine</h1>
-    <h2>"Wait, is that a typo?" Nope.</h2>
+    <div class="container d-flex min-vh-100 w-100 align-items-center my-3 my-lg-0">
+        <div class="container">
 
-    <p>Totally not an attempt at reimagining a certain dashboard component *smiles innocently*</p>
+            <div class="p-4 text-center border border-5">
+                <header class="p-3 font-monospace rounded-4 border border-5">
+                    <h1 class="display-4 fw-semibold m-0 p-0">VENDING MACHINE</h1>
+                </header>
+            </div>
+
+            <div class="p-4 border border-5 border-top-0">
+                <div class="p-3 row gx-5">
+                    <div class="col col-12 col-lg-8">
+                        <div class="row border border-5 rounded-4">
+                            <div class="col col-6 col-md-4 col-lg-2 d-flex justify-content-center h-100 p-2">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#gd-black">
+                                    <img src="./images/gd-peaceminusone-black.png" class="p-2">
+                                </a>
+                            </div>
+                            <div class="col col-6 col-md-4 col-lg-2 d-flex justify-content-center h-100 p-2">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#gd-red">
+                                    <img src="./images/gd-peaceminusone-red.png" class="p-2">
+                                </a>
+                            </div>
+                            <div class="col col-6 col-md-4 col-lg-2 d-flex justify-content-center h-100 p-2">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#sum-shinee">
+                                    <img src="./images/shinee-sparkling-water.png" class="p-2">
+                                </a>
+                            </div>
+                            <div class="col col-6 col-md-4 col-lg-2 d-flex justify-content-center h-100 p-2">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#hite-tvxq">
+                                    <img src="./images/hite-tvxq.png" class="p-2">
+                                </a>
+                            </div>
+                            <div class="col col-6 col-md-4 col-lg-2 d-flex justify-content-center h-100 p-2">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#hite-snsd">
+                                    <img src="./images/hite-snsd.png" class="p-2">
+                                </a>
+                            </div>
+                            <div class="col col-6 col-md-4 col-lg-2 d-flex justify-content-center h-100 p-2">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#hite-shinee">
+                                    <img src="./images/hite-shinee.png" class="p-2">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-none d-md-inline-block col-lg-4">
+                        <div class="border border-5 rounded-4 h-100 bg-secondary-subtle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border border-5 border-top-0">
+                <div class="p-5 border border-5 rounded-4 h-100 bg-secondary">
+                    <p class="fst-italic text-center text-white m-0">Totally not an attempt at reimagining a certain dashboard component :D</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GD Black -->
+    <div class="modal fade" id="gd-black" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="gd-blackLabel">Product Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row p-3 g-3">
+                        <div class="col col-12 col-lg-3 text-center">
+                            <img src="./images/gd-peaceminusone-black.png">
+                        </div>
+                        <div class="col col-12 col-lg-9 ">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item">BREWGURU PEACEMINUSONE Real Fresh Lemon Slice Highball 500mL [Black]</li>
+                                <li class="list-group-item">301602666</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="px-4 btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="px-4 btn btn-dark">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GD Red -->
+    <div class="modal fade" id="gd-red" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="gd-redLabel">Product Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row p-3 g-3">
+                        <div class="col col-12 col-lg-3 text-center">
+                            <img src="./images/gd-peaceminusone-red.png">
+                        </div>
+                        <div class="col col-12 col-lg-9 ">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item">BREWGURU PEACEMINUSONE Real Fresh Lemon Slice Highball 500mL [Red]</li>
+                                <li class="list-group-item">301602935</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="px-4 btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="px-4 btn btn-dark">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUM - SHINee -->
+    <div class="modal fade" id="sum-shinee" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sum-shineeLabel">Product Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row p-3 g-3">
+                        <div class="col col-12 col-lg-3 text-center">
+                            <img src="./images/shinee-sparkling-water.png">
+                        </div>
+                        <div class="col col-12 col-lg-9 ">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item">SHINee Daily Sparkling Water 500mL</li>
+                                <li class="list-group-item">Emart X SUM Market (March 2016)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="px-4 btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="px-4 btn btn-dark">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hite X TVXQ -->
+    <div class="modal fade" id="hite-tvxq" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="hite-tvxqLabel">Product Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row p-3 g-3">
+                        <div class="col col-12 col-lg-3 text-center">
+                            <img src="./images/hite-tvxq.png">
+                        </div>
+                        <div class="col col-12 col-lg-9 ">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Hite x SM Special Edition 'Dancing Beer'</li>
+                                <li class="list-group-item">TVXQ (Red)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="px-4 btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="px-4 btn btn-dark">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hite X SNSD -->
+    <div class="modal fade" id="hite-snsd" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="hite-snsdLabel">Product Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row p-3 g-3">
+                        <div class="col col-12 col-lg-3 text-center">
+                            <img src="./images/hite-snsd.png">
+                        </div>
+                        <div class="col col-12 col-lg-9 ">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Hite x SM Special Edition 'Dancing Beer'</li>
+                                <li class="list-group-item">Girls Generation (Pink)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="px-4 btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="px-4 btn btn-dark">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hite X SHINee -->
+    <div class="modal fade" id="hite-shinee" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="hite-shineeLabel">Product Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row p-3 g-3">
+                        <div class="col col-12 col-lg-3 text-center">
+                            <img src="./images/hite-shinee.png">
+                        </div>
+                        <div class="col col-12 col-lg-9 ">
+                                <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Hite x SM Special Edition 'Dancing Beer'</li>
+                                <li class="list-group-item">SHINee (Lake Blue)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="px-4 btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="px-4 btn btn-dark">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
