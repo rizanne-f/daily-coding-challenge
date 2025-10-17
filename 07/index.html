@@ -5,8 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Carousel Banner</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            position: relative;
+        }
+
+        .carousel-caption {
+            text-shadow: rgba(0,0,0, 0.9) 1px 0 7px;
+        }
+
+        @media (max-width: 991.98px) {
+            .carousel-bg {
+                position: absolute;
+                inset: 0;
+                background-size: cover;
+                background-position: center;
+                filter: blur(30px);
+                transform: scale(1.2);
+                pointer-events: none;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Carousel -->
+    <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item vh-100 active">
+                <div class="carousel-bg d-block d-lg-none" style="background-image: url('./images/brave.jpg');"></div>
+                <img src="./images/brave.jpg" alt="Brave" class="d-block object-fit-contain object-fit-lg-cover h-100 w-100">
+                <div class="carousel-caption border-0 border-lg">
+                    <h2>Brave (2012)</h2>
+                    <p> Pixar Animation Studios</p>
+                </div>
+            </div>
+            <div class="carousel-item vh-100">
+                <div class="carousel-bg d-block d-lg-none" style="background-image: url('./images/tangled.jpg');"></div>
+                <img src="./images/tangled.jpg" alt="Tangled" class="d-block object-fit-contain object-fit-lg-cover h-100 w-100">
+                <div class="carousel-caption border-0 border-lg">
+                    <h2>Tangled (2010)</h2>
+                    <p> Walt Disney Animation Studios</p>
+                </div>
+            </div>
+            <div class="carousel-item vh-100">
+                <div class="carousel-bg d-block d-lg-none" style="background-image: url('./images/up.jpeg');"></div>
+                <img src="./images/up.jpeg" alt="Up" class="d-block object-fit-contain object-fit-lg-cover h-100 w-100">
+                <div class="carousel-caption border-0 border-lg">
+                    <h2>Up (2009)</h2>
+                    <p> Pixar Animation Studios</p>
+                </div>
+            </div>
+            <div class="carousel-item vh-100">
+                <div class="carousel-bg d-block d-lg-none" style="background-image: url('./images/wall-e.jpg');"></div>
+                <img src="./images/wall-e.jpg" alt="Wall-E" class="d-block object-fit-contain object-fit-lg-cover h-100 w-100">
+                <div class="carousel-caption border-0 border-lg">
+                    <h2>Wall-E (2008)</h2>
+                    <p> Pixar Animation Studios</p>
+                </div>
+            </div>
+        </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
